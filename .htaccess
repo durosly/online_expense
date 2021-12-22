@@ -11,7 +11,7 @@ RewriteRule ^(.*)$ $1.html [NC,L]
 #custom routes
 RewriteRule ^home$ index.php [NC,L]
 RewriteRule ^signup$ signup.html [NC,L]
-RewriteRule ^signin$ login.html [NC,L]
+RewriteRule ^login$ login.php [NC,L]
 RewriteRule ^faqs$ faq.php [NC,L]
 RewriteRule ^about-us$ about.php [NC,L]
 RewriteRule ^contact-us$ contact.php [NC,L]

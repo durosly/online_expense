@@ -4,19 +4,14 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home | caurix expense management system</title>
+        <title>Log in | caurix expense management system</title>
     </head>
     <body class="auth">
-        <header class="header">
-            <img class="header__logo" src="assets/images/caurix-logo.png" alt="caurix logo" />
-            <ul class="header__nav">
-                <li class="header__nav-item">
-                    <a class="header__nav-link" href="/home">Home</a>
-                </li>
-            </ul>
-        </header>
         <main class="main">
             <form class="form form__login">
+                <div class="form__logo-container">
+                    <img src="assets/images//caurix-logo.png" alt="caurix logo" class="form__logo" />
+                </div>
                 <h2 class="form__title">Log in</h2>
                 <hr />
                 <div class="form-group">
@@ -31,7 +26,7 @@
                 <hr />
                 <div class="notice-area">
                     <p class="form__notice">Don't have an account?</p>
-                    <a href="/signup" class="form__link"></a>
+                    <a href="/signup" class="form__link">Sign up</a>
                 </div>
             </form>
         </main>
