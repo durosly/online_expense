@@ -1,0 +1,17 @@
+{
+  "name": "expense_app",
+  "version": "1.0.0",
+  "description": "Online tool for Expenses revenues tracking",
+  "main": "index.js",
+  "scripts": {
+    "sass-watch": "sass sass/main.scss assets/stylesheet/main.css -w",
+    "sass-watch-compress": "sass sass/main.scss assets/stylesheet/main.css -w --style compressed"
+  },
+  "repository": "git@github.com:durosly/online_expense.git",
+  "author": "durosly",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "sass": "^1.45.1"
+  }
+}

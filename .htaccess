@@ -1,0 +1,101 @@
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [NC,L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [NC,L]
+
+#custom routes
+RewriteRule ^home$ index.php [NC,L]
+RewriteRule ^signup$ signup.html [NC,L]
+RewriteRule ^signin$ login.html [NC,L]
+RewriteRule ^faqs$ faq.php [NC,L]
+RewriteRule ^about-us$ about.php [NC,L]
+RewriteRule ^contact-us$ contact.php [NC,L]
+RewriteRule ^tnc$ terms&conditions.php [NC,L]
+RewriteRule ^confirm-email$ confirm-email-notice.html [NC,L]
+RewriteRule ^instant-transaction$ transact.php [NC,L]
+RewriteRule ^track-instant-transaction$ transact-track.php [NC,L]
+RewriteRule ^instant-transaction-wallet/(.*)$ transact-display-wallet.php?key=$1 [NC,L]
+RewriteRule ^instant-transaction-complete$ transact-confirmation.php [NC,L]
+RewriteRule ^instant-transaction-history$ transact-track-display.php [NC,L]
+
+#password routes
+RewriteRule ^password/reset/([a-z]+)/([0-9])$ reset/password-reset.php?error=$1&case=$2 [NC,L]
+RewriteRule ^password/reset$ reset/password-reset.php [NC,L]
+RewriteRule ^password/reset-confirm$ reset/reset-confirm.php [NC,L]
+RewriteRule ^password/reset-resend$ reset/resend-password-reset.php [NC,L]
+RewriteRule ^password/reset-success$ reset/reset-password-success.php [NC,L]
+RewriteRule ^password/reset-new/(.*)/(.*)/([a-z]+)/([0-9])$ reset/reset-password.php?email=$1&key=$2&error=$3&case=$4 [NC,L]
+RewriteRule ^password/reset-new/(.*)/(.*)$ reset/reset-password.php?email=$1&key=$2 [NC,L]
+
+#email verification routes
+RewriteRule ^email/verify/(.*)/(.*)$ verify/verify-email.php?email=$1&key=$2
+RewriteRule ^email/verify-success$ verify/email-verification-success.php?email=$1&key=$2
+
+#includes routes
+RewriteRule ^server/btc-returns$ includes/get-btc-returns.php [NC,L]
+RewriteRule ^server/calculator$ includes/get-calculator-data.php [NC,L]
+RewriteRule ^server/signin$ includes/login.inc.php [NC,L]
+RewriteRule ^server/signup$ includes/signup.inc.php [NC,L]
+RewriteRule ^server/logout$ includes/logout.inc.php [NC,L]
+RewriteRule ^server/reset-password$ includes/password-reset.inc.php [NC,L]
+RewriteRule ^server/reset-password-new$ includes/reset-password.php [NC,L]
+RewriteRule ^server/validate-email/(.*)$ includes/emailValidator.php?email=$1 [NC,L]
+RewriteRule ^server/instant-transaction$ includes/quickTransact.php [NC,L]
+RewriteRule ^server/transaction$ includes/make-transaction.php [NC,L]
+RewriteRule ^server/admin-account-details$ includes/get-admin-account-details.php [NC,L]
+RewriteRule ^server/currency-wallet-details$ includes/get-currency-wallet-details.php [NC,L]
+RewriteRule ^server/currency-logo$ includes/get-currency-logo.php [NC,L]
+RewriteRule ^server/upload-profile-image$ includes/upload-profile-image.inc.php [NC,L]
+RewriteRule ^server/add-account$ includes/add-account-details.inc.php [NC,L]
+RewriteRule ^server/delete-account$ includes/delete-account-details.inc.php [NC,L]
+RewriteRule ^server/confirm-transaction$ includes/confirm-transaction.inc.php [NC,L]
+RewriteRule ^server/confirm-transaction-form$ includes/partials/confirm-transaction-form.php [NC,L]
+#includes - verification
+RewriteRule ^server/verify-user/([1-5])$ includes/verify-user-stage-$1.php [NC,L]
+
+#user routes
+RewriteRule ^auth/home$ user/homepage.php [NC,L]
+RewriteRule ^auth/trade$ user/trade.php [NC,L]
+RewriteRule ^auth/rates$ user/rates.php [NC,L]
+RewriteRule ^auth/history$ user/history.php [NC,L]
+RewriteRule ^auth/profile$ user/profile.php [NC,L]
+RewriteRule ^auth/verification$ user/verification.php [NC,L] #load verification page
+
+#admin routes
+RewriteRule ^bingo/?$ admin/ [NC,L]
+RewriteRule ^bingo/base$ admin/admin.php [NC,L]
+
+#admin tabs routes
+RewriteRule ^bingo/tab/currency/edit$ admin/tabs/currency/edit-currency.php [NC,L]
+RewriteRule ^bingo/tab/transaction/details$ admin/tabs/transact_info_tab/transaction-details.php [NC,L]
+RewriteRule ^bingo/tab/users/details$ admin/tabs/user_info_tab/profile-details.php [NC,L]
+RewriteRule ^bingo/tab/([a-z]+)$ admin/tabs/$1.php [NC,L]
+
+#admin includes routes
+RewriteRule ^bingo/server/login$ admin/includes/login.inc.php [NC,L]
+RewriteRule ^bingo/server/logout$ admin/includes/logout.inc.php [NC,L]
+RewriteRule ^bingo/server/toggle-visibility$ admin/includes/toggle-currency-visibility.php [NC,L]
+RewriteRule ^bingo/server/update-currency-price$ admin/includes/update-sell-buy.php [NC,L]
+RewriteRule ^bingo/server/update-currency-logo$ admin/includes/update-logo.php [NC,L]
+RewriteRule ^bingo/server/update-currency-wallet$ admin/includes/update-wallet.php [NC,L]
+RewriteRule ^bingo/server/create-currency$ admin/includes/create-currency.php [NC,L]
+RewriteRule ^bingo/server/update-username$ admin/includes/update-admin-username.php [NC,L]
+RewriteRule ^bingo/server/update-password$ admin/includes/update-admin-password.php [NC,L]
+RewriteRule ^bingo/server/update-dollar-rate$ admin/includes/update-rate.php [NC,L]
+RewriteRule ^bingo/server/add-account-details$ admin/includes/add-admin-account-details.php [NC,L]
+RewriteRule ^bingo/server/delete-account-details$ admin/includes/delete-admin-account-details.php [NC,L]
+RewriteRule ^bingo/server/set-trusted-account$ admin/includes/update-admin-trusted-account.php [NC,L]
+RewriteRule ^bingo/server/search-list$ admin/includes/search-transactions-list.php [NC,L]
+RewriteRule ^bingo/server/update-transaction-status$ admin/includes/update-transaction-status.php [NC,L]
+RewriteRule ^bingo/server/transaction-payment-proof$ admin/includes/get-transaction-payment-proof.php [NC,L]
+RewriteRule ^bingo/server/compare-hash$ admin/includes/compare-hash.php [NC,L]
+RewriteRule ^bingo/server/verify-user$ admin/includes/verify-user.php [NC,L]
+RewriteRule ^bingo/server/user-verification-image$ admin/includes/get-user-verification-image.php [NC,L]
+RewriteRule ^bingo/server/general-notice$ admin/includes/general-notice.php [NC,L]
+RewriteRule ^bingo/server/users-notice$ admin/includes/users-notice.php [NC,L]
+RewriteRule ^bingo/server/visitors-notice$ admin/includes/visitors-notice.php [NC,L]
