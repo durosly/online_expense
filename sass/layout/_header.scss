@@ -1,0 +1,39 @@
+.header {
+    padding: 1rem;
+    background-color: $color-white;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.6rem;
+
+    &__logo {
+        max-width: 5rem;
+    }
+
+    &__left {
+        display: flex;
+        align-items: center;
+    }
+
+    &__greet {
+        font-family: inherit;
+        margin-left: $gutter-small;
+    }
+
+    &__nav {
+        display: flex;
+        list-style-type: none;
+        flex: 1;
+    }
+
+    &__nav-link {
+        text-decoration: none;
+        font-family: inherit;
+        display: block;
+        padding: 1rem;
+
+        &:visited,
+        &:link {
+            color: $color-primary;
+        }
+    }
+}
