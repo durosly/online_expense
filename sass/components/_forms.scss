@@ -1,0 +1,86 @@
+.form {
+    background-color: $color-white;
+
+    &__login {
+        min-width: 30rem;
+        max-width: 40rem;
+        max-height: 50rem;
+        border-radius: $border-radius-primary;
+        overflow: hidden;
+        padding: $gutter-primary;
+    }
+
+    &__logo-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__logo {
+        max-width: 10rem;
+    }
+
+    &__title {
+        color: $color-primary;
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    hr {
+        border: 1px solid $color-dark-2;
+    }
+
+    &__group {
+        display: flex;
+        flex-direction: column;
+        margin: 1rem 0;
+    }
+
+    &__label {
+        font-size: 1.6rem;
+        margin-bottom: $gutter-small;
+    }
+
+    &__input {
+        outline: none;
+        padding: $gutter-small-2;
+        border-radius: $border-radius-primary;
+        border: 1px solid $color-primary;
+        font-size: 1.4rem;
+        font-family: inherit;
+    }
+
+    &__submit-btn {
+        font-size: 1.4rem;
+        padding: $gutter-small-2;
+        border: 1px solid transparent;
+        border-radius: $border-radius-primary;
+        outline: none;
+        background-color: $color-primary;
+        display: block;
+        width: 100%;
+        cursor: pointer;
+        margin-bottom: $gutter-small-2;
+
+        transition: background-color ease-in-out .3s;
+
+        &:hover {
+            //border: 1px solid #000;
+            color: $color-white;
+        }
+    }
+
+    .notice-area {
+        text-align: center;
+        font-size: 1.4rem;
+    }
+
+    &__notice {
+        margin-bottom: 0;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $color-primary;
+        font-family: inherit;
+    }
+}

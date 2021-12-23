@@ -1,0 +1,11 @@
+.auth {
+    overflow: hidden;
+    .main {
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
