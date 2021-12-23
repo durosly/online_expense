@@ -1,0 +1,22 @@
+.budget-records {
+    &__month,
+    &__year {
+        padding: 1rem 2.5rem;
+        border-color: $color-primary;
+        border-radius: $border-radius-primary;
+    }
+
+    &__submit {
+        padding: 1rem 2.5rem;
+        background-color: $color-primary;
+        border-radius: $border-radius-primary;
+        border: 1px solid transparent;
+        font-weight: bold;
+        color: $color-white;
+        cursor: pointer;
+
+        &:hover {
+            background-color: darken($color-primary, 20%);
+        }
+    }
+}

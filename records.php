@@ -35,13 +35,16 @@
         </header>
         <main class="main">
             <div class="container">
-                <form class="budget">
-                    <input type="text" name="budget" id="budget" class="budget__input" placeholder="Budget...">
-                    <select class="budget__choice" name="type" id="type">
-                        <option value="exp">Expense</option>
-                        <option value="inc">Sales</option>
+                <form class="budget-records">
+                    <select class="budget-records__month" name="month" id="month">
+                        <option value="1">January</option>
+                        <option value="2">Febuary</option>
                     </select>
-                    <button class="budget__submit">Add <i class="ml-1 fas fa-plus"></i></button>
+                    <select class="budget-records__year" name="year" id="year">
+                        <option value="2015">2015</option>
+                        <option value="2016">2016</option>
+                    </select>
+                    <button class="budget-records__submit">Show <i class="ml-1 fas fa-eye"></i></button>
                 </form>
 
                 <table class="budget-table">
