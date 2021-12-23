@@ -28,7 +28,7 @@
                     <label for="password" class="form__label">password</label>
                     <input type="password" name="password" id="password" class="form__input" />
                 </div>
-                <button class="form__submit-btn">Log in</button>
+                <button class="form__submit-btn">Log in <!--<img class="form__spinner" src="assets/images/spinner.gif" /> --></button>
                 <hr />
                 <div class="notice-area">
                     <p class="form__notice">Don't have an account?</p>
