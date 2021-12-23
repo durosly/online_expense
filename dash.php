@@ -43,69 +43,64 @@
                     </select>
                     <button class="budget__submit">Add <i class="ml-1 fas fa-plus"></i></button>
                 </form>
-
+                <span class="budget-display__date">
+                    October 21, 2018
+                </span>
                 <div class="budget-display">
                     <div class="budget-display__expenses">
-                        <h2 class="budget-display__title">Expenses</h2>
+                        <h2 class="budget-display__title budget-display__title--expenses">Expenses</h2>
                         <ul class="budget-display__list">
                             <li class="budget-display__item">
                                 <span class="budget-display__item--desc">Taxi</span>
                                 <span class="budget-display__item--cost">7,000</span>
-                                <i class="fas fa-trash"></i>
+                                <i class="fas fa-trash-alt"></i>
+                            </li>
+                            <li class="budget-display__item">
+                                <span class="budget-display__item--desc">Taxi</span>
+                                <span class="budget-display__item--cost">7,000</span>
+                                <i class="fas fa-trash-alt"></i>
+                            </li>
+                            <li class="budget-display__item">
+                                <span class="budget-display__item--desc">Taxi</span>
+                                <span class="budget-display__item--cost">7,000</span>
+                                <i class="fas fa-trash-alt"></i>
                             </li>
                         </ul>
                     </div>
                     <div class="budget-display__sales">
-                    <h2 class="budget-display__title">Sales</h2>
+                        <h2 class="budget-display__title budget-display__title--income">Sales</h2>
                         <ul class="budget-display__list">
                             <li class="budget-display__item">
                                 <span class="budget-display__item--desc">Taxi</span>
                                 <span class="budget-display__item--cost">7,000</span>
-                                <i class="fas fa-trash"></i>
+                                <i class="fas fa-trash-alt"></i>
+                            </li>
+                            <li class="budget-display__item">
+                                <span class="budget-display__item--desc">Taxi</span>
+                                <span class="budget-display__item--cost">7,000</span>
+                                <i class="fas fa-trash-alt"></i>
+                            </li>
+                            <li class="budget-display__item">
+                                <span class="budget-display__item--desc">Taxi</span>
+                                <span class="budget-display__item--cost">7,000</span>
+                                <i class="fas fa-trash-alt"></i>
+                            </li>
+                            <li class="budget-display__item">
+                                <span class="budget-display__item--desc">Taxi</span>
+                                <span class="budget-display__item--cost">7,000</span>
+                                <i class="fas fa-trash-alt"></i>
+                            </li>
+                            <li class="budget-display__item">
+                                <span class="budget-display__item--desc">Taxi</span>
+                                <span class="budget-display__item--cost">7,000</span>
+                                <i class="fas fa-trash-alt"></i>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <!--
-                <table class="budget-table">
-                    <thead>
-                        <tr>
-                            <th>Date</th>
-                            <th colspan="2">Expenses</th>
-                            <th colspan="2">Sales</th>
-                            <th>Net</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>22-dec-21</td>
-                            <td>Taxi</td>
-                            <td>250</td>
-                            <td>dresses</td>
-                            <td>1000</td>
-                            <td>750</td>
-                        </tr>
-                        <tr>
-                            <td>22-dec-21</td>
-                            <td>Taxi</td>
-                            <td>250</td>
-                            <td>dresses</td>
-                            <td>1000</td>
-                            <td>750</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td></td>
-                            <td>Total</td>
-                            <td>2750</td>
-                            <td></td>
-                            <td>1000</td>
-                            <td>-1750</td>
-                        </tr>
-                    </tfoot>
-                </table>
-                -->
+                <div class="align-right">
+                    <button class="budget-display__save-btn">Save <i class="fas fa-save ml-1"></i></button>
+                </div>
             </div>
         </main>
 
