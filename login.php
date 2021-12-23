@@ -32,7 +32,7 @@
                 <hr />
                 <div class="notice-area">
                     <p class="form__notice">Don't have an account?</p>
-                    <a href="/signup" class="form__link">Sign up</a>
+                    <a href="signup" class="form__link">Sign up</a>
                 </div>
             </form>
         </main>

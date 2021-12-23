@@ -4,7 +4,8 @@
     &__login {
         min-width: 30rem;
         max-width: 40rem;
-        max-height: 50rem;
+        margin: $gutter-primary 0;
+        //max-height: 50rem;
         border-radius: $border-radius-primary;
         overflow: hidden;
         padding: $gutter-primary;
