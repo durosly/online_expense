@@ -44,6 +44,29 @@
                     <button class="budget__submit">Add <i class="ml-1 fas fa-plus"></i></button>
                 </form>
 
+                <div class="budget-display">
+                    <div class="budget-display__expenses">
+                        <h2 class="budget-display__title">Expenses</h2>
+                        <ul class="budget-display__list">
+                            <li class="budget-display__item">
+                                <span class="budget-display__item--desc">Taxi</span>
+                                <span class="budget-display__item--cost">7,000</span>
+                                <i class="fas fa-trash"></i>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="budget-display__sales">
+                    <h2 class="budget-display__title">Sales</h2>
+                        <ul class="budget-display__list">
+                            <li class="budget-display__item">
+                                <span class="budget-display__item--desc">Taxi</span>
+                                <span class="budget-display__item--cost">7,000</span>
+                                <i class="fas fa-trash"></i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--
                 <table class="budget-table">
                     <thead>
                         <tr>
@@ -82,6 +105,7 @@
                         </tr>
                     </tfoot>
                 </table>
+                -->
             </div>
         </main>
 
