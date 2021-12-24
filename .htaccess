@@ -17,10 +17,10 @@ RewriteRule ^records$ records.php [NC,L]
 
 #includes routes
 RewriteRule ^server/signup$ includes/signup.inc.php [NC,L]
+RewriteRule ^server/login$ includes/login.inc.php [NC,L]
 
 RewriteRule ^server/btc-returns$ includes/get-btc-returns.php [NC,L]
 RewriteRule ^server/calculator$ includes/get-calculator-data.php [NC,L]
-RewriteRule ^server/signin$ includes/login.inc.php [NC,L]
 RewriteRule ^server/logout$ includes/logout.inc.php [NC,L]
 RewriteRule ^server/reset-password$ includes/password-reset.inc.php [NC,L]
 RewriteRule ^server/reset-password-new$ includes/reset-password.php [NC,L]

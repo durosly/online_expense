@@ -14,6 +14,23 @@
             $this->conn = $conn;
         }
 
+        function setPhone(string $phone) {
+            $this->phonenumber = $phone;
+        }
+
+        function findByPhone() {
+            $sql = "SELECT id, password FROM {$this->table} WHERE phonenumber = :phonenumber LIMIT 1;";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->bindParam(":phonenumber", $this->phonenumber);
+            $stmt->execute();
+
+            if($stmt->rowCount() > 0) {
+                return $stmt->fetch(PDO::FETCH_OBJ);
+            } else {
+                return false;
+            }
+        }
+
         function setUpNewUser(string $first, string $last, string $phonenumber, string $password) {
             $this->first = $first;
             $this->last = $last;

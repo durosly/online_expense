@@ -2,7 +2,7 @@
     <?php require_once "partials/header.php" ?>
     <body class="auth">
         <main class="main">
-            <form class="form form__login">
+            <form method="POST" enctype="multipart/form-data" class="form form__login">
                 <div class="form__logo-container">
                     <img src="assets/images//caurix-logo.png" alt="caurix logo" class="form__logo" />
                 </div>
@@ -24,6 +24,7 @@
                 </div>
             </form>
         </main>
+        <script src="dist/toast/toast.min.js"></script>
+        <script src="assets/js/login.js"></script>
     </body>
-    <script src="assets/login.js"></script>
 </html>
