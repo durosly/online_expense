@@ -4,6 +4,7 @@
         <span class="header__greet">Hello, Mary</span>
     </div>
     <div class="header__right">
+        <i class="fas fa-bars"></i>
         <ul class="header__nav">
             <li class="header__nav-item">
                 <a href="dashboard" class="header__nav-link">Dashboard</a>

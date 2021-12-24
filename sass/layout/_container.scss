@@ -1,4 +1,9 @@
 .container {
     max-width: 120rem;
     margin: 0 auto;
+
+    @include respond(1200px) {
+        margin-left: $gutter-primary;
+        margin-right: $gutter-primary;
+    }
 }
