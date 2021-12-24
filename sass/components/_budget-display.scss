@@ -2,9 +2,13 @@
     display: flex;
     justify-content: space-between;
     margin-top: 3rem;
-    background-color: rgba($color-dark-2, .9);
+    background-color: rgba($color-dark-2, .9); 
     padding: 1.8rem;
     border-radius: $border-radius-primary;
+
+    @include respond(500px) {
+        flex-direction: column;
+    }
 
     &__date {
         font-size: 2rem;
@@ -20,6 +24,11 @@
 
     &__expenses {
         margin-right: $gutter-large;
+
+        @include respond(500px) {
+            margin-right: 0;
+            border-bottom: 1px solid $color-dark;
+        }
     }
 
     &__list {
@@ -70,6 +79,7 @@
         cursor: pointer;
         margin-top: $gutter-primary;
         background-color: $color-primary;
+        margin-bottom: $gutter-primary;
 
         &:hover {
             background-color: darken($color-primary, 20%);

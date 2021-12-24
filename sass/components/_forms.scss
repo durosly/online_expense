@@ -110,6 +110,15 @@
         outline: none;
         padding: 0 2rem;
         font-size: 1.6rem;
+
+        @include respond(500px) {
+            padding: 0 1rem;
+            height: 3.5rem;
+        }
+
+        @include respond(396px) {
+            font-size: 1.4rem;
+        }
     }
 
     &__choice {
@@ -128,5 +137,23 @@
         font-weight: bold;
         background-color: $color-primary;
         color: $color-white;
+
+        @include respond(500px) {
+            padding: 1rem;
+        }
+
+        i {
+            vertical-align: center;
+
+            @include respond(500px) {
+                margin-left: 0;
+            }
+        }
+
+        span {
+            @include respond(500px) {
+                display: none;
+            }
+        }
     }
 }

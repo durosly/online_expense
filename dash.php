@@ -1,4 +1,4 @@
-    <?php $pageName = "Dashboard" ?>
+    <?php $pageName = "Dashboard" ?> 
     <?php require_once 'partials/header.php' ?>
     <body class="dash">
         <?php require_once 'partials/nav.php' ?>
@@ -10,7 +10,10 @@
                         <option value="exp">Expense</option>
                         <option value="inc">Sales</option>
                     </select>
-                    <button class="budget__submit">Add <i class="ml-1 fas fa-plus"></i></button>
+                    <button class="budget__submit">
+                        <span>Add</span>
+                        <i class="ml-1 fas fa-plus"></i>
+                    </button>
                 </form>
                 <span class="budget-display__date">
                     October 21, 2018
