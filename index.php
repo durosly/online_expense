@@ -1,21 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | caurix expense management system</title>
-    <link rel="stylesheet" type="text/css" href="assets/stylesheet/main.min.css" />
-</head>
+<?php $pageName = "Home"; ?>
+<?php require_once "partials/header.php" ?>
 <body>
-    <header class="header">
-        <img class="header__logo" src="assets/images/caurix-logo.png" alt="caurix logo" />
-        <ul class="header__nav">
-            <li class="header__nav-item">
-                <a class="header__nav-link" href="/home">Home</a>
-            </li>
-        </ul>
-    </header>
+    <main class="index">
+        <img src="assets/images//caurix-logo.png" alt="caurix logo" class="index__logo">
+        <div class="index__notice">
+            <h2 class="index__title">Welcome to caurix online tool for Expenses revenues tracking</h2>
+            <P class="index__info">We offer the best of services at affordable prices and you can still get the most out of caurix online tool for expenses revenue tracking on the free package.</P>
+            <a href="login" class="index__link index__link--login">Log in</a>
+            <a href="signup" class="index__link index__link--signup">Sign up</a>
+        </div>
+    </main>
 
 </body>
 </html>

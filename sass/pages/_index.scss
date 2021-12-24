@@ -1,0 +1,69 @@
+.index {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    &__notice {
+        padding: 2rem;
+        border-radius: $border-radius-primary;
+        background-color: rgba($color-primary, .2);
+        max-width: 40rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: $gutter-primary;
+        margin-left: $gutter-primary;
+        margin-right: $gutter-primary;
+    }
+
+    &__logo {
+        width: 15rem;
+        margin: $gutter-primary 0;
+    }
+
+    &__title {
+        font-size: 1.8rem;
+    }
+
+    &__info {
+        font-size: 1.6rem;
+        font-style: italic;
+    }
+
+    &__link {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        font-weight: bold;
+        padding: 2rem 6rem;
+        border-radius: 20rem;
+
+        &--login {
+            &:link,
+            &:visited {
+                color: $color-white;
+                background-color: rgba($color-primary, .8);
+                margin-bottom: $gutter-primary;
+            }
+
+            &:hover {
+                background-color: $color-primary;
+            }
+        }
+
+        &--signup {
+            &:link,
+            &:visited {
+                color: $color-dark;
+                background-color: $color-white;
+                border: 1px solid $color-dark;
+            }
+
+            &:hover {
+                background-color: darken($color-white, 10%);
+            }
+        }
+    }
+}
