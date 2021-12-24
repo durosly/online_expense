@@ -1,3 +1,4 @@
+    <?php require_once 'partials/auth.php' ?>
     <?php $pageName = "Dashboard" ?> 
     <?php require_once 'partials/header.php' ?>
     <body class="dash">
