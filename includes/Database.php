@@ -1,18 +1,19 @@
 <?php
     class Database {
-        private $dbname = "online_expenses_work";
+        private $dbname = "online_expenses_upwork";
         private $servername = "localhost";
         private $username = "root";
         private $password = "";
+        private $conn = null;
 
 
         function __construct() {
             $dsn = "mysql:host={$this->servername};dbname={$this->dbname}";
-            try {
-
-                return new PDO($dsn, $this->username, $this->password);
-            } catch(PDOException $e) {
-                return false;
-            }
+            $this->conn = new PDO($dsn, $this->username, $this->password);
         }
+
+        function get_conn():PDO {
+            return $this->conn;
+        }
+
     }

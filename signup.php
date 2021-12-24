@@ -2,7 +2,7 @@
     <?php require_once "partials/header.php" ?>
     <body class="auth">
         <main class="main">
-            <form class="form form__login">
+            <form method="POSt" enctype="multipart/form-data" class="form form__login">
                 <div class="form__logo-container">
                     <img src="assets/images//caurix-logo.png" alt="caurix logo" class="form__logo" />
                 </div>
@@ -24,7 +24,7 @@
                     <label for="password" class="form__label">password</label>
                     <input type="password" name="password" id="password" class="form__input" />
                 </div>
-                <button class="form__submit-btn">Sign up <!--<img class="form__spinner" src="assets/images/spinner.gif" /> --></button>
+                <button name="submit" type="submit" class="form__submit-btn">Sign up <!--<img class="form__spinner" src="assets/images/spinner.gif" /> --></button>
                 <hr />
                 <div class="notice-area">
                     <p class="form__notice">Already have an account?</p>
