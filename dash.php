@@ -6,7 +6,8 @@
         <main class="main">
             <div class="container">
                 <form class="budget">
-                    <input type="text" name="budget" id="budget" class="budget__input" placeholder="Budget...">
+                    <input type="text" name="title" id="title" class="budget__title" placeholder="Title...">
+                    <input type="text" name="amount" id="amount" class="budget__amount" placeholder="amount...">
                     <select class="budget__choice" name="type" id="type">
                         <option value="exp">Expense</option>
                         <option value="inc">Sales</option>
@@ -23,7 +24,7 @@
                     <div class="budget-display__expenses">
                         <h2 class="budget-display__title budget-display__title--expenses">Expenses</h2>
                         <ul class="budget-display__list">
-                            <li class="budget-display__item">
+                            <!-- <li class="budget-display__item">
                                 <span class="budget-display__item--desc">Taxi</span>
                                 <span class="budget-display__item--cost">7,000</span>
                                 <i class="fas fa-trash-alt"></i>
@@ -37,13 +38,13 @@
                                 <span class="budget-display__item--desc">Taxi</span>
                                 <span class="budget-display__item--cost">7,000</span>
                                 <i class="fas fa-trash-alt"></i>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                     <div class="budget-display__sales">
                         <h2 class="budget-display__title budget-display__title--income">Sales</h2>
                         <ul class="budget-display__list">
-                            <li class="budget-display__item">
+                            <!-- <li class="budget-display__item">
                                 <span class="budget-display__item--desc">Taxi</span>
                                 <span class="budget-display__item--cost">7,000</span>
                                 <i class="fas fa-trash-alt"></i>
@@ -67,7 +68,7 @@
                                 <span class="budget-display__item--desc">Taxi</span>
                                 <span class="budget-display__item--cost">7,000</span>
                                 <i class="fas fa-trash-alt"></i>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                 </div>

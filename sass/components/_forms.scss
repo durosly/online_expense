@@ -103,7 +103,7 @@
     background: $color-white;
     margin-top: $gutter-primary;
 
-    @include respond(360px) {
+    @include respond(700px) {
         flex-direction: column;
         overflow: auto;
         border-radius: 0;
@@ -112,7 +112,7 @@
         border-bottom: 1px solid $color-dark-2;
     }
 
-    &__input {
+    &__title {
         flex: 1;
         height: 5rem;
         border: none;
@@ -129,7 +129,22 @@
             font-size: 1.4rem;
         }
 
-        @include respond(360px) {
+        @include respond(700px) {
+            padding: 1rem 2.5rem;
+            border: 1px solid $color-primary;
+            border-radius: $border-radius-primary;
+            margin-bottom: $gutter-small-2;
+        }
+    }
+
+    &__amount {
+        border: none;
+        outline: none;
+        padding: 0 2rem;
+        font-size: 1.6rem;
+        border-left: 1px solid $color-primary;
+
+        @include respond(700px) {
             padding: 1rem 2.5rem;
             border: 1px solid $color-primary;
             border-radius: $border-radius-primary;
@@ -142,7 +157,7 @@
         border-left: 1px solid $color-primary;
         padding: 0 1rem;
 
-        @include respond(360px) {
+        @include respond(700px) {
             padding: 1rem 2.5rem;
             border: 1px solid $color-primary;
             border-radius: $border-radius-primary;
@@ -161,11 +176,8 @@
         background-color: $color-primary;
         color: $color-white;
 
-        @include respond(500px) {
+        @include respond(700px) {
             padding: 1rem;
-        }
-
-        @include respond(360px) {
             border-radius: $border-radius-primary;
         }
     }
