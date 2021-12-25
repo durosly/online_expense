@@ -10,7 +10,7 @@
                     <input type="text" name="amount" id="amount" class="budget__amount" placeholder="amount...">
                     <select class="budget__choice" name="type" id="type">
                         <option value="exp">Expense</option>
-                        <option value="inc">Sales</option>
+                        <option value="inc" selected>Sales</option>
                     </select>
                     <button class="budget__submit">
                         <span>Add</span>
@@ -18,57 +18,17 @@
                     </button>
                 </form>
                 <span class="budget-display__date">
-                    October 21, 2018
+                    <?php echo date("F d, Y") ?>
                 </span>
                 <div class="budget-display">
                     <div class="budget-display__expenses">
                         <h2 class="budget-display__title budget-display__title--expenses">Expenses</h2>
-                        <ul class="budget-display__list">
-                            <!-- <li class="budget-display__item">
-                                <span class="budget-display__item--desc">Taxi</span>
-                                <span class="budget-display__item--cost">7,000</span>
-                                <i class="fas fa-trash-alt"></i>
-                            </li>
-                            <li class="budget-display__item">
-                                <span class="budget-display__item--desc">Taxi</span>
-                                <span class="budget-display__item--cost">7,000</span>
-                                <i class="fas fa-trash-alt"></i>
-                            </li>
-                            <li class="budget-display__item">
-                                <span class="budget-display__item--desc">Taxi</span>
-                                <span class="budget-display__item--cost">7,000</span>
-                                <i class="fas fa-trash-alt"></i>
-                            </li> -->
+                        <ul class="budget-display__list" id="expenses-list">
                         </ul>
                     </div>
                     <div class="budget-display__sales">
                         <h2 class="budget-display__title budget-display__title--income">Sales</h2>
-                        <ul class="budget-display__list">
-                            <!-- <li class="budget-display__item">
-                                <span class="budget-display__item--desc">Taxi</span>
-                                <span class="budget-display__item--cost">7,000</span>
-                                <i class="fas fa-trash-alt"></i>
-                            </li>
-                            <li class="budget-display__item">
-                                <span class="budget-display__item--desc">Taxi</span>
-                                <span class="budget-display__item--cost">7,000</span>
-                                <i class="fas fa-trash-alt"></i>
-                            </li>
-                            <li class="budget-display__item">
-                                <span class="budget-display__item--desc">Taxi</span>
-                                <span class="budget-display__item--cost">7,000</span>
-                                <i class="fas fa-trash-alt"></i>
-                            </li>
-                            <li class="budget-display__item">
-                                <span class="budget-display__item--desc">Taxi</span>
-                                <span class="budget-display__item--cost">7,000</span>
-                                <i class="fas fa-trash-alt"></i>
-                            </li>
-                            <li class="budget-display__item">
-                                <span class="budget-display__item--desc">Taxi</span>
-                                <span class="budget-display__item--cost">7,000</span>
-                                <i class="fas fa-trash-alt"></i>
-                            </li> -->
+                        <ul class="budget-display__list" id="income-list">
                         </ul>
                     </div>
                 </div>
@@ -77,7 +37,7 @@
                 </div>
             </div>
         </main>
-
+        <script src="dist/toast/toast.min.js"></script>
         <script src="assets/js/dash.js"></script>
     </body>
 </html>
