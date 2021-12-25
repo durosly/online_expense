@@ -38,8 +38,8 @@
                         <button class="budget-records__submit">Show <i class="ml-1 fas fa-eye"></i></button>
                     </form>
                     <?php 
-                        $budget->month = date("m");
-                        $budget->year = date("Y");
+                        $budget->month = (int) ($_GET['month'] ?? date("m"));
+                        $budget->year = (int) ($_GET['year'] ?? date("Y"));
                         $records = $budget->getBudgetsByDate();
                     ?>
                     <?php if($records === false) { ?>
