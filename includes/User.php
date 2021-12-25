@@ -1,11 +1,11 @@
 <?php
     require_once "Database.php";
     class User {
-        private $id;
-        private $first;
-        private $last;
-        private $phonenumber;
-        private $password;
+        public $id;
+        public $first;
+        public $last;
+        public $phonenumber;
+        public $password;
         private $table = "users";
         private $conn = null;
 
@@ -63,6 +63,20 @@
 
             if($stmt->execute()) {
                 return true;
+            } else {
+                return false;
+            }
+        }
+
+        function getFirstname() {
+            $sql = "SELECT firstname FROM {$this->table} WHERE id = :userId LIMIT 1;";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->bindParam(":userId", $this->id);
+            $stmt->execute();
+
+            if($stmt->rowCount() > 0) {
+                $row = $stmt->fetch(PDO::FETCH_OBJ);
+                return $row->firstname;
             } else {
                 return false;
             }
