@@ -30,4 +30,48 @@ class Budget {
 
         $stmt->execute();
     }
+
+    function getMonths() {
+        $sql = "SELECT DISTINCT month FROM {$this->table} WHERE userId = :userId ORDER BY month ASC LIMIT 12;";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bindParam(":userId", $this->id);
+
+        $stmt->execute();
+
+        if($stmt->rowCount() > 0) {
+            return $stmt;
+        } else {
+            return false;
+        }
+    }
+
+    function getYears() {
+        $sql = "SELECT DISTINCT year FROM {$this->table} WHERE userId = :userId ORDER BY year ASC;";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bindParam(":userId", $this->id);
+
+        $stmt->execute();
+
+        if($stmt->rowCount() > 0) {
+            return $stmt;
+        } else {
+            return false;
+        }
+    }
+
+    function getBudgetsByDate() {
+        $sql = "SELECT * FROM {$this->table} WHERE userId = :userId AND year = :year AND month = :month ORDER BY date ASC;";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bindParam(":userId", $this->id);
+        $stmt->bindParam(":year", $this->year);
+        $stmt->bindParam(":month", $this->month);
+
+        $stmt->execute();
+
+        if($stmt->rowCount() > 0) {
+            return $stmt;
+        } else {
+            return false;
+        }
+    }
 }

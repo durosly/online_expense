@@ -21,4 +21,8 @@
     tbody tr:nth-child(odd) {
         background-color: lighten($color-dark-2, 3%);
     }
+
+    tfoot {
+        font-weight: bold;
+    }
 }
