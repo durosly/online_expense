@@ -70,8 +70,8 @@ function TableBodyRow({ item }) {
             <TableBodyRowData data={inc.title} field={"title"} type={"text"} dataType={"inc"} date={date} />
             <TableBodyRowData data={inc.cost} field={"cost"} type={"number"} dataType={"inc"} date={date} />
             <td>{ inc.cost - exp.cost }</td>
-            <td>
-                <i onClick={() => removeField(date)} className="fas fa-trash-alt"></i>
+            <td onClick={() => removeField(date)} className="budget-table__delete-cell">
+                <i className="fas fa-trash-alt"></i>
             </td>
         </tr>
     )
@@ -178,6 +178,15 @@ function Dashboard() {
 
         setData([...data, newData])
     }
+
+    function handleSave() {
+        new Toast({
+            message: "Save feature coming soon", 
+            type: "info"
+        })
+    }
+
+
     return (
         <React.Fragment>
             <DataContext.Provider value={{ data, updateField, removeField }}>
@@ -186,8 +195,8 @@ function Dashboard() {
                         <Table />
                     </div>
                     <div className="align-right">
-                        <button onClick={addNewField} className="budget-display__save-btn">Add <i className="fas fa-plus"></i></button>
-                        <button className="budget-display__save-btn ml-1">Save <i className="fas fa-save ml-1"></i></button>
+                        <button onClick={addNewField} className="budget-display__save-btn">Add <i className="fas fa-plus ml-1"></i></button>
+                        <button onClick={handleSave} className="budget-display__save-btn ml-1">Save <i className="fas fa-save ml-1"></i></button>
                     </div>
                 </div>
             </DataContext.Provider>

@@ -4,7 +4,7 @@
     <body class="dash">
         <?php require_once 'partials/nav.php' ?>
         <main id="main" class="main">
-            <h2>Loading...</h2>
+            <h2 class="main__loading-text animate-flicker">Loading...</h2>
             <!-- <div class="container">
                 <form class="budget">
                     <input type="text" name="title" id="title" class="budget__title" placeholder="Title...">

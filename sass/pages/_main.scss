@@ -1,0 +1,17 @@
+.main {
+    &__loading-text {
+        font-size: 3rem;
+        margin-top: 2rem;
+        text-align: center;
+    }
+}
+
+@keyframes flickerAnimation { /* flame pulses */
+    0%   { opacity:1; }
+    50%  { opacity:0; }
+    100% { opacity:1; }
+}
+.animate-flicker {
+    opacity:1;  
+    animation: flickerAnimation 1s infinite;
+}

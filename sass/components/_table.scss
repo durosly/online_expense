@@ -18,15 +18,25 @@
     tr, td, th {
         border: 1px solid $color-primary;
         padding: 1rem;
+        width: calc(100% / 7);
+    }
+
+    &__delete-cell {
+        text-align: center;
+
+        i {
+            color: red;
+            cursor: pointer;
+        }
     }
 
     &__data-input {
         display: block;
-        width: 100%;
+        max-width: 20rem;
         height: 100%;
         border: none;
         outline: none;
-        padding: 5px 20px;
+        //padding: 5px 20px;
     }
 
     tbody tr:nth-child(odd) {
