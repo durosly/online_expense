@@ -12,7 +12,7 @@
             $this->conn = new PDO($dsn, $this->username, $this->password);
         }
 
-        function get_conn():PDO {
+        function get_conn() {
             return $this->conn;
         }
 
