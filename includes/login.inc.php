@@ -1,7 +1,7 @@
 <?php
 
-    $phonenumber = $_POST['phone'] ?? "";
-    $password = $_POST['password'] ?? "";
+    $phonenumber = isset($_POST['phone']) ? $_POST['phone'] :  "";
+    $password = isset($_POST['password']) ? $_POST['password'] : "";
 
     require_once "Database.php";
     require_once "User.php";

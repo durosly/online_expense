@@ -11,7 +11,7 @@
         <lik rel="stylesheet" type="text/css" href="dist/toast/toast.min.css" />
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
         <title>
-            <?php echo $pageName ?? "Caurix" ?>
+            <?php echo isset($pageName) ? $pageName : "Caurix" ?>
             | caurix expense management system</title>
         <link rel="stylesheet" type="text/css" href="assets/stylesheet/main.min.css" />
     </head>
